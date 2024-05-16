@@ -1,0 +1,361 @@
+
+/*-------set variables--------*/
+:root {
+  --blue: #4891c2;
+  --white: #ffffff;
+  --black: #000000;
+  --dark-blue: #1b548a;
+  --light-blue: #bce4ff;
+  --grey: rgb(40,40,40);
+}
+
+/*-------Clear Padding and Margin on all elements--------*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color: var(--light-blue);
+}
+
+.text-link {
+  text-decoration: none;
+  color: var(--white);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.mainSection {
+  display: flex;
+  background-color: var(--light-blue);
+}
+
+ol {
+  list-style: none;
+}
+
+/*-------header css--------*/
+header {
+  height: 12vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+  background: linear-gradient(to right, var(--dark-blue), var(--blue));
+  position: sticky;
+}
+
+header h1 {
+  margin: 0;
+  padding: 0;
+  color: var(--white);
+  font-size: 3rem;
+}
+
+header button {
+  background-color: var(--dark-blue);
+  border-radius: 10px;
+}
+
+/*-------Navbar css--------*/
+nav {
+  width: 15vw;
+  background: linear-gradient(to bottom, var(--dark-blue), var(--blue));
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+nav li {
+  list-style: none;
+  margin: 1.5rem 0;
+  margin-left: 4vw;
+  width: 10vw;
+  padding: 1rem;
+  border-radius: 100vw 0 0 100vw;
+  color: var(--white);
+}
+
+nav li:hover {
+  background-color: var(--light-blue);
+  color: var(--black);
+}
+
+nav .active {
+  background-color: var(--light-blue);
+  color: var(--black);
+}
+
+nav .text-link {
+  color: inherit;
+}
+
+nav img {
+  height: 2rem;
+}
+
+nav label {
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+/*-------main container css--------*/
+
+.welcome-container {
+  min-height: 88vh;
+  text-align: center;
+  width: 85vw;
+  margin: 2rem;
+}
+
+.welcome-text {
+  font-size: 2rem;
+}
+
+.groupMembers {
+  list-style: none; 
+  padding: 0;
+}
+
+.groupMembers li, .box {
+  background-color: #fff;
+  padding: 10px;
+  margin-top: 5px; 
+  border-radius: 5px; 
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05); 
+}
+
+.groupMembers li:hover {
+  background-color: #e9e9e9; 
+}
+
+.project-details {
+  margin-top: 20px;
+  font-size: 1rem;
+}
+
+.selected {
+  background-color: var(--light-blue); /* Change the background color to light blue */
+}
+.assign-project-container {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.select-student,
+.select-project {
+  margin-bottom: 15px;
+}
+select {
+  width: 100%;
+  height: 36px;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+
+
+/*--------------------------- Form CSs -------------------------------*/
+form {
+  width: 80%; /* Consistent width as other components */
+  margin: 20px auto; /* Center the form */
+  padding: 20px;
+  background-color: #f2f2f2; /* Light grey background */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Consistent shadow */
+  border-radius: 8px; /* Rounded corners */
+}
+
+form div {
+  margin-bottom: 15px; /* Space between form groups */
+}
+
+label {
+  display: block; /* Make label a block element */
+  margin-bottom: 5px; /* Space below the label */
+  color: #333; /* Dark grey color for text */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+textarea {
+  width: calc(100% - 22px); /* Full width minus padding */
+  padding: 10px; /* Padding for text field */
+  border: 1px solid #ddd; /* Subtle border */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.05); /* Inner shadow for depth */
+}
+
+textarea {
+  height: 100px; /* Fixed height for the textarea */
+  resize: vertical; /* Allows only vertical resizing */
+}
+
+button {
+  background-color: #333; /* Dark background for the button */
+  color: #fff; /* White text */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px; /* Rounded corners for the button */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.25); /* Shadow for the button */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+button:hover {
+  background-color: #555; /* Darker shade on hover */
+}
+
+form button:disabled {
+  background-color: #ccc; /* Greyed out when disabled */
+  cursor: default; /* Default cursor when disabled */
+}
+
+form p {
+  color: red;
+  margin-bottom: 10px;
+}
+/*---------------------- Table CSS-----------------------------*/
+table {
+  width: 80%; /* Consistent width with the welcome-container */
+  margin: 20px auto; /* Center the table */
+  border-collapse: collapse; /* Ensures borders between cells are merged */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Consistent shadow with the container */
+  overflow-x: auto;
+}
+
+table thead {
+  background-color: #333; /* Darker background for the header */
+  color: #fff; /* White text for contrast */
+}
+
+table th,table td {
+  text-align: left; /* Align text to the left */
+  padding: 10px; /* Padding inside cells */
+  border-bottom: 1px solid #ddd; /* Light grey border for separation */
+}
+
+table th {
+  font-size: 16px; /* Slightly larger font size for headers */
+}
+
+table tbody tr:hover {
+  background-color: #f2f2f2; /* Light grey background on row hover, consistent with the container background */
+}
+
+table tbody td {
+  background-color: #fff; /* White background for table cells */
+  border-radius: 5px; /* Rounded corners for cells */
+}
+
+table ul {
+  padding: 0;
+  margin: 0;
+  list-style: none; /* Remove default list styles */
+}
+
+table ul li {
+  padding: 5px 0; /* Padding for list items */
+}
+
+
+/*--------------------Responsivenesss-------------------------*/
+@media  (max-width: 768px) {
+  /* ------ Header ------ */
+  header h1 {
+    font-size: 1.5rem;
+    padding-left: 10%;
+  }
+
+  nav label {
+    display:block;
+    position:fixed;
+    top: 2rem;
+    left: 1rem;
+  }
+
+  .mainSection {
+    display: block;
+    height: 88vh;
+  }
+
+  nav {
+      position: fixed;
+      top: 12vh;
+      left: 0px;
+      width: 100vw;
+      height: 100vh;
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      transition: all 0.5s;
+      z-index: 99;
+  }
+
+  nav li {
+      margin: 0.75rem 0px;
+      border-radius: 100vw;
+      width: inherit;
+      text-align: center;
+  }
+
+  nav .active {
+      background-color: var(--blue);
+      color: var(--black)
+  }
+
+  nav li:hover {
+      background-color: var(--blue);
+      color: var(--black);
+  }
+
+  table, thead, tbody, th, td, tr { 
+    display: block; 
+  }
+
+  thead tr { 
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tr { border: 1px solid #ccc; }
+
+  td {
+    border: none;
+    border-bottom: 1px solid #eee; 
+    position: relative;
+    padding-left: 50%; 
+    text-align: right;
+  }
+
+  td:before { 
+    position:relative;
+    top: 6px;
+    left: 6px;
+    width: 45%; 
+    padding-right: 10px; 
+    white-space: nowrap;
+    text-align: left;
+    font-weight: bold;
+  }
+
+  th, td {
+    padding: 8px; /* smaller padding on small screens */
+  }
+
+  /* Label the data */
+  td:nth-of-type(1):before { content: "Title"; }
+  td:nth-of-type(2):before { content: "Description"; }
+  td:nth-of-type(3):before { content: "Students"; }
+  td:nth-of-type(4):before { content: "Supervisor"; }
+}
